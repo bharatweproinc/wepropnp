@@ -18,6 +18,7 @@ import {
     Button,
     FormControl,
     FormControlLabel,
+    Grid,
     Radio,
     RadioGroup,
     Typography,
@@ -214,11 +215,19 @@ export default function Create({ auth }) {
 
                         <div className="mt-4">
                             <InputLabel htmlFor="profile" value="Profile Photo" />
-
                              <input type="file" className="mt-1 block w-full"
                              id="profile" name="profile" accept="image/png, image/jpeg ,image/jpeg , image/svg"
                              onChange={(e)=>{ setData('profile', e.target.files[0]) }}/>
 
+                            {/* {   data.profile &&
+                                <Grid item xs={12} md={4} sm={6}>
+                                    <div style={{ position: "relative" }}>
+                                        <a ref={data.profile} target="_blank">
+                                            <img src={data.profile} alt={'profile image'} />
+                                        </a>
+                                    </div>
+                                </Grid>
+                            } */}
                         </div>
 
                         <div className="mt-4">
