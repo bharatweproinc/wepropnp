@@ -38,7 +38,7 @@ class SalaryRepository implements SalaryInterface
 
     public function detail($id)
     {
-        
+
     }
 
     public function edit()
@@ -46,8 +46,10 @@ class SalaryRepository implements SalaryInterface
 
     }
 
-    public function update()
+    public function update($data,$id)
     {
-
+        $user = Salary::where('user_id',$id)->first();
+        $user->update($data);
+        return true;
     }
 }
